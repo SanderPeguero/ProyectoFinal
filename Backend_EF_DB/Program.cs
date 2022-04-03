@@ -31,7 +31,9 @@ dispositivos.Add(iphonex);
 
 
 sander.Dispositivos.Add(new Dispositivo());
-Console.WriteLine(sander.Dispositivos.Count());
+
+
+// Console.WriteLine(sander.Dispositivos.Count());
 // sander.Dispositivos.AddRange(dispositivos);
 
 

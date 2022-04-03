@@ -1,7 +1,298 @@
 ﻿@page "/RegistroClientes"
 
-<h1>Registro de Clientes</h1>
+<EditForm Model="cliente" OnValidSubmit="Guardar">
+    <DataAnnotationsValidator/>
+
+    <div class="card align-items-inherit bg-dark mb-5" style="width: 35rem;">
+
+        <div class="card mb-3 bg-secondary">
+
+            <div class="card-header bg-dark">
+                <h3 class="text-white">Registro de Clientes</h3>
+            </div>
+
+            <div class="card-body">
+
+                <div class="form-row align-items-center mb-3">
+                    <div class="col">
+                        <div class="form-group">
+                            <div class="input-group">
+
+                                <span class="input-group-text">ClienteId</span>
+                                <InputNumber class="form-control me-3 rounded-end" @bind-Value="ClienteId"/>
+                                @* <ValidationMessage For="@(() => producto.ProductoId)"/> *@
+                                <div class="input-group-append">
+                                     <button type="button" class="btn btn-dark input-group-text" > @* @onclick="Buscar" *@
+                                         <span class="oi oi-magnifying-glass" title="magnifying-glass" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="input-group">
+
+                        <span class="input-group-text">Nombre</span>
+                        <InputText class="form-control" @bind-Value="Nombre" />
+                        <ValidationMessage For="@(() => Nombre)"/>
+
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="input-group">
+
+                        <span class="input-group-text">Apellido</span>
+                        <InputText class="form-control" @bind-Value="Apellido" />
+                        <ValidationMessage For="@(() => Apellido)"/>
+
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="input-group">
+
+                        <span class="input-group-text">Cedula</span>
+                        <InputText class="form-control" @bind-Value="Cedula"/>
+                        <ValidationMessage For="@(() => Cedula)"/>
+
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <div class="input-group">
+
+                        <span class="input-group-text">Telefono</span>
+                        <InputText class="form-control" @bind-Value="Telefono"/>
+                        <ValidationMessage For="@(() => Telefono)"/>
+
+                    </div>
+                </div>
+                
+                <div class="form-group mb-3">
+                    <div class="input-group">
+
+                        <span class="input-group-text">Fecha</span>
+                        <InputDate class="form-control" @bind-Value="Fecha"/>
+                        <ValidationMessage For="@(() => Fecha)"/>
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+            
+        @* <div class="card mb-3 bg-secondary">
+
+            <div class="card-header bg-dark">
+                <h3 class="text-white">Utilizados</h3>
+            </div>
+
+            <div class="card-body">
+                <div class="col">
+                    <div class="form-group">
+                        <div class="input-group">
+
+                            <div class="d-inline mx-3">
+
+                                <label>Producto</label>
+                                <select class="form-select" aria-label="Default select example" @bind="Producto">
+                                    <option selected disabled value="">Selecciona...</option>
+                                    <option value="Caja Mixta">Caja Mixta</option>
+                                    <option value="Fundita Mixta">Fundita Mixta</option>
+                                    <option value="2">Mani</option>
+                                    <option value="3">Pistacho</option>
+                                    <option value="4">Pasas</option>
+                                    <option value="5">Ciruelas</option>
+                                    <option value="6">Arandanos</option>
+                                </select>
+
+                            </div>
+
+                            <div class="d-block">
+
+                                <label>Cantidad</label>
+                                <InputNumber class="form-control" @bind-Value="Cantidad"/>
+
+                            </div>
+                            
+                            <div class="m-4">
+
+                                <button type="button" class="btn btn-lg btn-dark" @onclick="Guardar">
+                                    Add
+                                </button>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h5 class="text-black m-2">Inventario</h5>
+            <table class="table table-light">
+                <thead class="thead">
+                    <tr class="table m-3">
+                        <th>Id</th>
+                        <th>Fecha</th>
+                        <th class="m-6">Concepto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var inventario in DataInventario)
+                    {
+                        <tr>
+                            <td>@inventario.Id</td>
+                            <td>@inventario.Fecha</td>
+                            <td>@inventario.Concepto</td>
+
+                            <td>
+                                <span class="btn btn-sm btn-secondary oi oi-ban" href="#">
+                                    Remover
+                                </span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <h5 class="text-black m-2">Cajas</h5>
+            <table class="table table-light">
+                <thead class="thead">
+                    <tr class="table m-3">
+                        <th>Id</th>
+                        <th>Fecha</th>
+                        <th class="m-6">Peso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var caja in DataCajas)
+                    {
+                        <tr>
+                            <td>@caja.Id</td>
+                            <td>@caja.Fecha</td>
+                            <td>@caja.Peso lbs</td>
+
+                            <td>
+                                <span class="btn btn-sm btn-secondary oi oi-ban" href="#">
+                                    Remover
+                                </span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <h5 class="text-black m-2">Funditas</h5>
+            <table class="table table-light">
+                <thead class="thead">
+                    <tr class="table m-3">
+                        <th>Id</th>
+                        <th>Fecha</th>
+                        <th class="m-6">Peso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var fundita in DataFunditas)
+                    {
+                        <tr>
+                            <td>@fundita.Id </td>
+                            <td>@fundita.Fecha </td>
+                            <td>@fundita.Peso lbs</td>
+
+                            <td>
+                                <span class="btn btn-sm btn-secondary oi oi-ban" href="#">
+                                    Remover
+                                </span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="card mb-3 bg-secondary">
+
+            <div class="card-header bg-dark">
+                <h3 class="text-white">Producido</h3>
+            </div>
+
+            <div class="card-body">
+                <div class="col">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="d-block mx-3">
+                                <label>Producto</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected disabled value="">Selecciona...</option>
+                                    <option value="1">Caja Mixta</option>
+                                    <option value="2">Mani</option>
+                                    <option value="3">Pistacho</option>
+                                    <option value="4">Pasas</option>
+                                    <option value="5">Ciruelas</option>
+                                    <option value="6">Arandanos</option>
+                                </select>
+                            </div>
+                            <div class="d-block">
+                                <label>Cantidad</label>
+                                <InputNumber class="form-control" @bind-Value="Producido"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        *@
+
+        <div class="form-group text-center mb-3">
+             <button type="button" class="btn btn-lg btn-outline-primary mx-3" @onclick="Nuevo">
+                Nuevo
+            </button>
+            <button type="button" class="btn btn-lg btn-outline-success mx-3" @onclick="Guardar">
+                Guardar
+            </button>
+            <button type="button" class="btn btn-lg btn-outline-danger mx-3" @onclick="Eliminar">
+                Eliminar
+            </button>
+        </div>
+
+    </div> 
+    
+</EditForm>
+
 
 @code {
+
+    public Cliente cliente = new Cliente();
+
+    public int ClienteId;
+
+    public string Nombre;
+
+    public string Apellido;
+
+    public string Cedula;
+
+    public string Telefono;
+
+    public DateTime Fecha = new DateTime();
+
+    void Nuevo(){
+
+    }
+
+    void Guardar(){
+
+    }
+
+    void Eliminar(){
+
+    }
     
 }

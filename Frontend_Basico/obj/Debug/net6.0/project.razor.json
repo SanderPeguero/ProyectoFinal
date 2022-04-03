@@ -12,6 +12,72 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": -476957373,
+        "Kind": "Components.Component",
+        "Name": "Frontend_Basico.Pages.Home",
+        "AssemblyName": "Frontend_Basico",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Home"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Frontend_Basico.Pages.Home"
+        }
+      },
+      {
+        "HashCode": 1030868680,
+        "Kind": "Components.Component",
+        "Name": "Frontend_Basico.Pages.Home",
+        "AssemblyName": "Frontend_Basico",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend_Basico.Pages.Home"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Frontend_Basico.Pages.Home",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1295751348,
+        "Kind": "Components.Component",
+        "Name": "Frontend_Basico.Pages.RecepcionDetalle",
+        "AssemblyName": "Frontend_Basico",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RecepcionDetalle"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Frontend_Basico.Pages.RecepcionDetalle"
+        }
+      },
+      {
+        "HashCode": 674134133,
+        "Kind": "Components.Component",
+        "Name": "Frontend_Basico.Pages.RecepcionDetalle",
+        "AssemblyName": "Frontend_Basico",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend_Basico.Pages.RecepcionDetalle"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Frontend_Basico.Pages.RecepcionDetalle",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -814433253,
         "Kind": "Components.Component",
         "Name": "Frontend_Basico.Pages.ConsultaClientes",
@@ -78,39 +144,6 @@
         }
       },
       {
-        "HashCode": -476957373,
-        "Kind": "Components.Component",
-        "Name": "Frontend_Basico.Pages.Home",
-        "AssemblyName": "Frontend_Basico",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Home"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Frontend_Basico.Pages.Home"
-        }
-      },
-      {
-        "HashCode": 1030868680,
-        "Kind": "Components.Component",
-        "Name": "Frontend_Basico.Pages.Home",
-        "AssemblyName": "Frontend_Basico",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Frontend_Basico.Pages.Home"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Frontend_Basico.Pages.Home",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1710159513,
         "Kind": "Components.Component",
         "Name": "Frontend_Basico.Pages.Recepcion",
@@ -140,39 +173,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Frontend_Basico.Pages.Recepcion",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1295751348,
-        "Kind": "Components.Component",
-        "Name": "Frontend_Basico.Pages.RecepcionDetalle",
-        "AssemblyName": "Frontend_Basico",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RecepcionDetalle"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Frontend_Basico.Pages.RecepcionDetalle"
-        }
-      },
-      {
-        "HashCode": 674134133,
-        "Kind": "Components.Component",
-        "Name": "Frontend_Basico.Pages.RecepcionDetalle",
-        "AssemblyName": "Frontend_Basico",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Frontend_Basico.Pages.RecepcionDetalle"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Frontend_Basico.Pages.RecepcionDetalle",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -239,39 +239,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Frontend_Basico.Pages.RegistroDispositivo",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 976834689,
-        "Kind": "Components.Component",
-        "Name": "Frontend_Basico.App",
-        "AssemblyName": "Frontend_Basico",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Frontend_Basico.App"
-        }
-      },
-      {
-        "HashCode": 794792120,
-        "Kind": "Components.Component",
-        "Name": "Frontend_Basico.App",
-        "AssemblyName": "Frontend_Basico",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Frontend_Basico.App"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Frontend_Basico.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -401,6 +368,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Frontend_Basico.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 976834689,
+        "Kind": "Components.Component",
+        "Name": "Frontend_Basico.App",
+        "AssemblyName": "Frontend_Basico",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Frontend_Basico.App"
+        }
+      },
+      {
+        "HashCode": 794792120,
+        "Kind": "Components.Component",
+        "Name": "Frontend_Basico.App",
+        "AssemblyName": "Frontend_Basico",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend_Basico.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Frontend_Basico.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
