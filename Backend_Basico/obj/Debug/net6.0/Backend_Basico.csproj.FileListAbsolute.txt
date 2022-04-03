@@ -1,0 +1,15 @@
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/bin/Debug/net6.0/Backend_Basico
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/bin/Debug/net6.0/Backend_Basico.deps.json
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/bin/Debug/net6.0/Backend_Basico.runtimeconfig.json
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/bin/Debug/net6.0/Backend_Basico.dll
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/bin/Debug/net6.0/ref/Backend_Basico.dll
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/bin/Debug/net6.0/Backend_Basico.pdb
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/obj/Debug/net6.0/Backend_Basico.csproj.AssemblyReference.cache
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/obj/Debug/net6.0/Backend_Basico.GeneratedMSBuildEditorConfig.editorconfig
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/obj/Debug/net6.0/Backend_Basico.AssemblyInfoInputs.cache
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/obj/Debug/net6.0/Backend_Basico.AssemblyInfo.cs
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/obj/Debug/net6.0/Backend_Basico.csproj.CoreCompileInputs.cache
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/obj/Debug/net6.0/Backend_Basico.dll
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/obj/Debug/net6.0/ref/Backend_Basico.dll
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/obj/Debug/net6.0/Backend_Basico.pdb
+/Users/sanderpeguero/Desktop/ProyectoFinal/Backend_Basico/obj/Debug/net6.0/Backend_Basico.genruntimeconfig.cache

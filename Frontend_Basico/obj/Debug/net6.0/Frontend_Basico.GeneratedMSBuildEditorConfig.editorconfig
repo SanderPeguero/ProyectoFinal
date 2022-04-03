@@ -1,0 +1,72 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Frontend_Basico
+build_property.RootNamespace = Frontend_Basico
+build_property.ProjectDir = /Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/ConsultaClientes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29uc3VsdGFDbGllbnRlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/ConsultaDispositivos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ29uc3VsdGFEaXNwb3NpdGl2b3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/Recepcion.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVjZXBjaW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/RecepcionDetalle.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVjZXBjaW9uRGV0YWxsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/RegistroClientes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0cm9DbGllbnRlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/RegistroDispositivo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVnaXN0cm9EaXNwb3NpdGl2by5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-cl2c2vbzi6
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-peczjuendg
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

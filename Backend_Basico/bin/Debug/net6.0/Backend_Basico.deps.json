@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Backend_Basico/1.0.0": {
+        "runtime": {
+          "Backend_Basico.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Backend_Basico/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,63 @@
+using Microsoft.EntityFrameworkCore;
+
+public class RecepcionesBLL{
+
+    private static Contexto contexto = new Contexto();
+
+    public static bool Create(Recepcion recepcion){//Inserta una Recepcion a la base de datos
+
+        bool successfull = false;
+
+        contexto.Entry(recepcion).State = EntityState.Added;
+
+        successfull = contexto.SaveChanges() > 0;
+
+        return successfull;
+
+    }
+
+    public static Recepcion Read(int Id){//Lee la Recepcion con el id dado en la base de datos y la devuelve
+
+        Recepcion recepcion = new Recepcion();
+
+        recepcion = contexto.Recepciones.Find(Id);
+
+        return recepcion;
+
+    }
+
+    public static bool Update(Recepcion recepcion){//Dada una Recepcion, modifica la equivalente en la base de datos
+        
+        bool successfull = false;
+
+        if(contexto.Recepciones.Any(l => l.RecepcionId == recepcion.RecepcionId)){
+
+            contexto.Entry(recepcion).State = EntityState.Modified;
+            successfull = contexto.SaveChanges() > 0;
+
+        }
+
+        return successfull;
+
+    }
+
+    public static bool Delete(Recepcion recepcion){//Dada una Recepcion, elimina la equivalente en la base de datos
+    
+        bool successfull = false;
+
+        contexto.Entry(recepcion).State = EntityState.Deleted;
+        successfull = contexto.SaveChanges() > 0;
+        
+        return successfull;
+
+    }
+
+    public static Recepcion BuscarTecnico(string Tecnico){
+        
+        return contexto.Recepciones
+            .Where(x => x.Tecnico == Tecnico)
+            .FirstOrDefault();
+
+    }
+
+}
