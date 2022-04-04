@@ -73,4 +73,10 @@ public class CategoriasBLL{
 
     }
 
+    public static List<Categoria> GetList(){
+
+        return contexto.Categorias.ToList();
+        
+    }
+
 }

@@ -19,14 +19,9 @@
                             <div class="input-group">
 
                                 <span class="input-group-text">Id</span>
-                                <InputNumber class="form-control me-3 rounded-end" @bind-Value="RecepcionId"/>
+                                <InputNumber class="form-control me-3 rounded-end" @bind-Value="recepcion.RecepcionId"/>
                                 @* <ValidationMessage For="@(() => producto.ProductoId)"/> *@
-                                <div class="input-group-append">
-                                     <button type="button" class="btn btn-dark input-group-text" > @* @onclick="Buscar" *@
-                                         <span class="oi oi-magnifying-glass" title="magnifying-glass" aria-hidden="true"></span>
-                                    </button>
-                                </div>
-
+                                
                             </div>
                         </div>
                     </div>
@@ -46,16 +41,45 @@
                     <div class="input-group">
 
                         <span class="input-group-text">Cliente</span>
-                        <select class="form-select" aria-label="Default select example" @bind="Cliente">
-                            @foreach (var cliente in clientes)
+                        <select class="form-select" aria-label="Default select example" @bind="recepcion.ClienteId">
+                            <option selected disabled value="">Selecciona...</option>
+                            @foreach (var item in ClientesBLL.GetList())
                             {
-                                <option value={cliente.ClienteId}>cliente.Nombre</option>
+                                <option value=@item.ClienteId >@item.Nombre @item.Apellido</option>
                             }
                         </select>
+                        
                         <ValidationMessage For="@(() => Cliente)"/>
+                        
+                        <div class="input-group-append mx-3">
+                            <button type="button" class="btn btn-dark input-group-text" @onclick="BuscarCliente"> 
+                                <span class="oi oi-magnifying-glass" title="magnifying-glass" aria-hidden="true"></span>
+                            </button>
+                        </div>
 
                     </div>
                 </div>
+
+                @if(cliente.ClienteId  > 0){
+
+                    <div class="form-group mb-3">
+                        <div class="input-group">
+
+                            <span class="input-group-text">Dispositivo</span>
+                            <select class="form-select" aria-label="Default select example" @bind="dispositivo.DispositivoId">
+                                <option selected disabled value="">Selecciona...</option>
+                                @foreach (var dispositivo in cliente.Dispositivos)
+                                {
+                                    <option value=@dispositivo.DispositivoId >@dispositivo.Marca @dispositivo.Modelo</option>
+                                }
+                            </select>
+                            
+                            <ValidationMessage For="@(() => Cliente)"/>
+                            
+                        </div>
+                    </div>
+
+                }
 
                 @* <div class="form-group mb-3">
                     <div class="input-group">
@@ -71,7 +95,7 @@
                     <div class="input-group">
 
                         <span class="input-group-text">Técnico</span>
-                        <InputText class="form-control" @bind-Value="Tecnico"/>
+                        <InputText class="form-control" @bind-Value="recepcion.Tecnico"/>
                         <ValidationMessage For="@(() => Tecnico)"/>
 
                     </div>
@@ -81,10 +105,10 @@
                     <div class="input-group">
 
                         <span class="input-group-text">Categoría</span>
-                        <select class="form-select" aria-label="Default select example" @bind="Cliente">
-                            @foreach (var categoria in categorias)
+                        <select class="form-select" aria-label="Default select example" @bind="recepcion.CategoriaId">
+                            @foreach (var categoria in CategoriasBLL.GetList())
                             {
-                                <option value="1">@categoria.Nombre</option>
+                                <option value=@categoria.CategoriaId> @categoria.Nombre</option>
                             }
                         </select>
                         <ValidationMessage For="@(() => Cliente)"/>
@@ -97,9 +121,9 @@
 
                         <span class="input-group-text">Producto</span>
                         <select class="form-select" aria-label="Default select example" @bind="Cliente">
-                            @foreach (var producto in productos)
+                            @foreach (var producto in ProductosBLL.GetList())
                             {
-                                <option value="1">@producto.Nombre</option>
+                                <option value=@producto.ProductoId>@producto.Nombre</option>
                             }
                         </select>
                         <ValidationMessage For="@(() => Cliente)"/>
@@ -182,9 +206,13 @@
 @code {
 
     //Utilidades
-    List<Cliente> clientes = new List<Cliente>();
+    Cliente cliente = new Cliente();
     List<Categoria> categorias = new List<Categoria>();
     List<Producto> productos = new List<Producto>();
+
+    Dispositivo dispositivo = new Dispositivo();
+
+    int ClienteId;
 
 
     //Entidad
@@ -209,13 +237,33 @@
     //Metodos Recepcion
     void Nuevo(){
 
+        cliente = new Cliente();
+        dispositivo = new Dispositivo();
+
     }
 
     void Guardar(){
 
+        for(int s = 0; s < problemas.Count(); s++)
+            recepcion.Problemas.Add(problemas[s]);
+        
+        RecepcionesBLL.Create(recepcion);
+
     }
 
     void Eliminar(){
+
+    }
+
+    void BuscarCliente(){
+        
+        Nuevo();
+
+        cliente = ClientesBLL.Read(recepcion.ClienteId);
+
+        Console.WriteLine(cliente.Dispositivos.Count());
+
+        @* dispositivos = cliente.Dispositivos; *@
 
     }
 
@@ -229,7 +277,7 @@
         
         RecepcionDetalle detalle = new RecepcionDetalle();
 
-        detalle.RecepcionDetalleId = problemas.Count();
+        @* detalle.RecepcionDetalleId = problemas.Count(); *@
         detalle.Detalle = Detalle;
         
         problemas.Add(detalle);

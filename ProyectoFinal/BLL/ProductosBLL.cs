@@ -63,4 +63,10 @@ public class ProductosBLL{
 
     }
 
+    public static List<Producto> GetList(){
+
+        return contexto.Productos.ToList();
+        
+    }
+
 }

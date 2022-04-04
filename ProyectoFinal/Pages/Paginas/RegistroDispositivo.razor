@@ -181,16 +181,22 @@
     }
 
     void Eliminar(){
+        
+        ClientesBLL.Delete(cliente);
+
+        cliente.Dispositivos.Remove(dispositivo);
+
+        ClientesBLL.Create(cliente);
 
     }
 
     //Metodos Utilidad
 
     void Buscar(){
+        
+        cliente = ClientesBLL.Read(dispositivo.ClienteId);
 
-        CargarLista();
-        Console.WriteLine(dispositivos.Count());
-        dispositivo = dispositivos[DispositivoNo];
+        dispositivo = cliente.Dispositivos[DispositivoNo - 1];
 
     }
 

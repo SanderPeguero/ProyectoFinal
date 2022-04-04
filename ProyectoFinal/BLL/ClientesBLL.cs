@@ -20,7 +20,9 @@ public class ClientesBLL{
 
         Cliente cliente = new Cliente();
 
-        cliente = contexto.Clientes.Find(Id);
+        // cliente = contexto.Clientes.Find(Id);
+
+        cliente = contexto.Clientes.Include(x => x.Dispositivos).Where(x => x.ClienteId == Id).SingleOrDefault();
 
         return cliente;
 
@@ -75,5 +77,16 @@ public class ClientesBLL{
         return contexto.Clientes.ToList();
         
     }
+
+    public static List<Cliente> GetListDispositivos(Func<Cliente, bool> criterio){
+
+        List<Cliente> dispositivos = new List<Cliente>();
+        
+        dispositivos = contexto.Clientes.Include(x => x.Dispositivos).Where(x => x.Dispositivos.Count() > 0 ).ToList();
+        
+        return dispositivos;
+        
+    }
+
 
 }
