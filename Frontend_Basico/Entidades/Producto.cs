@@ -1,14 +1,18 @@
 using System.ComponentModel.DataAnnotations;
 
-public class Producto{
+namespace Frontend_Basico{
+    
+    public class Producto{
 
-    [Key]
-    public int ProductoId {get; set;}
+        [Key]
+        public int ProductoId {get; set;}
 
-    public string Nombre {get; set;}
+        public string Nombre {get; set;}
 
-    public int Precio {get; set;}
+        public int Precio {get; set;}
 
-    public string Descripcion {get; set;}
+        public string Descripcion {get; set;}
+        
+    }
     
 }

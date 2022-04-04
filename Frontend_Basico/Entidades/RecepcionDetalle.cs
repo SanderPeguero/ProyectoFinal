@@ -1,11 +1,15 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-public class RecepcionDetalle{
+namespace Frontend_Basico{
 
-    [Key]
-    public int RecepcionDetalleId {get; set;}
+    public class RecepcionDetalle{
 
-    public string Detalle {get; set;}
+        [Key]
+        public int RecepcionDetalleId {get; set;}
 
+        public string Detalle {get; set;}
+
+    }
+    
 }

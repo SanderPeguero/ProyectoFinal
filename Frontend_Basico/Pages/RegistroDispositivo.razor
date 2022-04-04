@@ -18,7 +18,7 @@
                         <div class="form-group">
                             <div class="input-group">
 
-                                <span class="input-group-text">DispositivoId</span>
+                                <span class="input-group-text">Id</span>
                                 <InputNumber class="form-control me-3 rounded-end" @bind-Value="DispositivoId"/>
                                 @* <ValidationMessage For="@(() => producto.ProductoId)"/> *@
                                 <div class="input-group-append">
@@ -35,7 +35,7 @@
                 <div class="form-group mb-3">
                     <div class="input-group">
 
-                        <span class="input-group-text">Nombre</span>
+                        <span class="input-group-text">Marca</span>
                         <InputText class="form-control" @bind-Value="Marca" />
                         <ValidationMessage For="@(() => Marca)"/>
 
@@ -45,7 +45,7 @@
                 <div class="form-group mb-3">
                     <div class="input-group">
 
-                        <span class="input-group-text">Apellido</span>
+                        <span class="input-group-text">Modelo</span>
                         <InputText class="form-control" @bind-Value="Modelo" />
                         <ValidationMessage For="@(() => Modelo)"/>
 
@@ -55,7 +55,7 @@
                 <div class="form-group mb-3">
                     <div class="input-group">
 
-                        <span class="input-group-text">Cedula</span>
+                        <span class="input-group-text">IMEI</span>
                         <InputText class="form-control" @bind-Value="IMEI"/>
                         <ValidationMessage For="@(() => IMEI)"/>
 
@@ -65,7 +65,7 @@
                 <div class="form-group mb-3">
                     <div class="input-group">
 
-                        <span class="input-group-text">Telefono</span>
+                        <span class="input-group-text">Color</span>
                         <InputText class="form-control" @bind-Value="Color"/>
                         <ValidationMessage For="@(() => Color)"/>
 
@@ -75,10 +75,8 @@
                 <div class="form-group mb-3">
                     <div class="input-group">
 
-                        @* <InputCheckbox class="form-control" @bind-Value="Teclado"/> *@
-
                         <label class="custom-control-label mx-2 text-light" for="customControlAutosizing">Teclado Fisico</label>
-                        <input type="checkbox" class="custom-control-input mt-1" id="customControlAutosizing">
+                        <input type="checkbox" class="custom-control-input" style="margin-top: 0.35rem;" id="customControlAutosizing" @bind-value="Teclado">
 
                     </div>
                 </div>

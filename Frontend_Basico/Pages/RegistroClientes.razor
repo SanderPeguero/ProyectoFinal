@@ -18,7 +18,7 @@
                         <div class="form-group">
                             <div class="input-group">
 
-                                <span class="input-group-text">ClienteId</span>
+                                <span class="input-group-text">Id</span>
                                 <InputNumber class="form-control me-3 rounded-end" @bind-Value="ClienteId"/>
                                 @* <ValidationMessage For="@(() => producto.ProductoId)"/> *@
                                 <div class="input-group-append">
@@ -281,7 +281,7 @@
 
     public string Telefono;
 
-    public DateTime Fecha = new DateTime();
+    public DateTime Fecha = DateTime.Now;
 
     void Nuevo(){
 

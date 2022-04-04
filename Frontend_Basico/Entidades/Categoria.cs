@@ -1,12 +1,16 @@
 using System.ComponentModel.DataAnnotations;
 
-public class Categoria{
-
-    [Key]
-    public int CategoriaId {get; set;}
+namespace Frontend_Basico{
     
-    public string Nombre {get; set;}
+    public class Categoria{
 
-    public string Descripcion {get; set;}
+        [Key]
+        public int CategoriaId {get; set;}
+        
+        public string Nombre {get; set;}
 
+        public string Descripcion {get; set;}
+
+    }
+    
 }

@@ -31,12 +31,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/Recepcion.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVjZXBjaW9uLnJhem9y
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/RecepcionDetalle_Page.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVjZXBjaW9uRGV0YWxsZV9QYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/RecepcionDetalle.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVjZXBjaW9uRGV0YWxsZS5yYXpvcg==
+[/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/Recepcion_Page.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVjZXBjaW9uX1BhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/sanderpeguero/Desktop/ProyectoFinal/Frontend_Basico/Pages/RegistroClientes.razor]
