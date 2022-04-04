@@ -7,10 +7,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Backend_EF_DB.Migrations
+namespace ProyectoFinal.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20220402181917_Inicial")]
+    [Migration("20220404081828_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,8 +38,26 @@ namespace Backend_EF_DB.Migrations
                         new
                         {
                             CategoriaId = 1,
-                            Descripcion = "El dispositivo no suena, tampoco vibra, ni muestra nada en pantalla",
-                            Nombre = "No enciende"
+                            Descripcion = "El dispositivo no enciende sin estar conectado al cargador",
+                            Nombre = "Bateria"
+                        },
+                        new
+                        {
+                            CategoriaId = 2,
+                            Descripcion = "El dispositivo no muestra nada en pantalla pero suena y da algunas respuestas a la interaccion",
+                            Nombre = "Pantalla"
+                        },
+                        new
+                        {
+                            CategoriaId = 3,
+                            Descripcion = "El dispositivo no ha sufrido daños fisicos, la bateria y la pantalla funcionan al intercambiarla con un dispositivo de prueba",
+                            Nombre = "Tarjeta Madre"
+                        },
+                        new
+                        {
+                            CategoriaId = 4,
+                            Descripcion = "El dispositivo no carga, la bateria se muestra en buen estado al intercambiarla con un dispositivo de prueba",
+                            Nombre = "Pin de Carga"
                         });
                 });
 
@@ -90,6 +108,9 @@ namespace Backend_EF_DB.Migrations
                     b.Property<string>("Modelo")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("SO")
+                        .HasColumnType("TEXT");
+
                     b.Property<bool>("Teclado")
                         .HasColumnType("INTEGER");
 
@@ -125,7 +146,28 @@ namespace Backend_EF_DB.Migrations
                             ProductoId = 1,
                             Descripcion = "El tecnico retira la bateria vieja y la cambia por una nueva",
                             Nombre = "Cambio de Bateria",
+                            Precio = 400
+                        },
+                        new
+                        {
+                            ProductoId = 2,
+                            Descripcion = "El tecnico retira la bateria vieja y la cambia por otra",
+                            Nombre = "Cambio de Pantalla",
                             Precio = 800
+                        },
+                        new
+                        {
+                            ProductoId = 3,
+                            Descripcion = "El tecnico retira la bateria vieja y la cambia por otra",
+                            Nombre = "Cambio de Tarjeta Madre",
+                            Precio = 1200
+                        },
+                        new
+                        {
+                            ProductoId = 4,
+                            Descripcion = "El tecnico retira la bateria vieja y la cambia por otro",
+                            Nombre = "Cambio de Pin de Carga",
+                            Precio = 1600
                         });
                 });
 
@@ -135,28 +177,22 @@ namespace Backend_EF_DB.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("CategoriaId")
+                    b.Property<int>("CategoriaId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("ClienteId")
+                    b.Property<int>("ClienteId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("Fecha")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("ProductoId")
+                    b.Property<int>("ProductoId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Tecnico")
                         .HasColumnType("TEXT");
 
                     b.HasKey("RecepcionId");
-
-                    b.HasIndex("CategoriaId");
-
-                    b.HasIndex("ClienteId");
-
-                    b.HasIndex("ProductoId");
 
                     b.ToTable("Recepciones");
                 });
@@ -187,27 +223,6 @@ namespace Backend_EF_DB.Migrations
                         .HasForeignKey("ClienteId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Recepcion", b =>
-                {
-                    b.HasOne("Categoria", "Categoria")
-                        .WithMany()
-                        .HasForeignKey("CategoriaId");
-
-                    b.HasOne("Cliente", "Cliente")
-                        .WithMany()
-                        .HasForeignKey("ClienteId");
-
-                    b.HasOne("Producto", "Producto")
-                        .WithMany()
-                        .HasForeignKey("ProductoId");
-
-                    b.Navigation("Categoria");
-
-                    b.Navigation("Cliente");
-
-                    b.Navigation("Producto");
                 });
 
             modelBuilder.Entity("RecepcionDetalle", b =>

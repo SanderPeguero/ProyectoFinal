@@ -45,72 +45,6 @@
         }
       },
       {
-        "HashCode": -476957373,
-        "Kind": "Components.Component",
-        "Name": "Frontend_Basico.Pages.Home",
-        "AssemblyName": "Frontend_Basico",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Home"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Frontend_Basico.Pages.Home"
-        }
-      },
-      {
-        "HashCode": 1030868680,
-        "Kind": "Components.Component",
-        "Name": "Frontend_Basico.Pages.Home",
-        "AssemblyName": "Frontend_Basico",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Frontend_Basico.Pages.Home"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Frontend_Basico.Pages.Home",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 531283810,
-        "Kind": "Components.Component",
-        "Name": "Frontend_Basico.Pages.RegistroDispositivo",
-        "AssemblyName": "Frontend_Basico",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RegistroDispositivo"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Frontend_Basico.Pages.RegistroDispositivo"
-        }
-      },
-      {
-        "HashCode": 1883992270,
-        "Kind": "Components.Component",
-        "Name": "Frontend_Basico.Pages.RegistroDispositivo",
-        "AssemblyName": "Frontend_Basico",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Frontend_Basico.Pages.RegistroDispositivo"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Frontend_Basico.Pages.RegistroDispositivo",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1683231144,
         "Kind": "Components.Component",
         "Name": "Frontend_Basico.Pages.ConsultaDispositivos",
@@ -144,35 +78,35 @@
         }
       },
       {
-        "HashCode": 613105960,
+        "HashCode": -476957373,
         "Kind": "Components.Component",
-        "Name": "Frontend_Basico.Pages.RegistroClientes",
+        "Name": "Frontend_Basico.Pages.Home",
         "AssemblyName": "Frontend_Basico",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "RegistroClientes"
+            "TagName": "Home"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Frontend_Basico.Pages.RegistroClientes"
+          "Common.TypeName": "Frontend_Basico.Pages.Home"
         }
       },
       {
-        "HashCode": -1172212517,
+        "HashCode": 1030868680,
         "Kind": "Components.Component",
-        "Name": "Frontend_Basico.Pages.RegistroClientes",
+        "Name": "Frontend_Basico.Pages.Home",
         "AssemblyName": "Frontend_Basico",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Frontend_Basico.Pages.RegistroClientes"
+            "TagName": "Frontend_Basico.Pages.Home"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Frontend_Basico.Pages.RegistroClientes",
+          "Common.TypeName": "Frontend_Basico.Pages.Home",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -239,6 +173,72 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Frontend_Basico.Pages.Recepcion_Page",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 613105960,
+        "Kind": "Components.Component",
+        "Name": "Frontend_Basico.Pages.RegistroClientes",
+        "AssemblyName": "Frontend_Basico",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RegistroClientes"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Frontend_Basico.Pages.RegistroClientes"
+        }
+      },
+      {
+        "HashCode": -1172212517,
+        "Kind": "Components.Component",
+        "Name": "Frontend_Basico.Pages.RegistroClientes",
+        "AssemblyName": "Frontend_Basico",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend_Basico.Pages.RegistroClientes"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Frontend_Basico.Pages.RegistroClientes",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 531283810,
+        "Kind": "Components.Component",
+        "Name": "Frontend_Basico.Pages.RegistroDispositivo",
+        "AssemblyName": "Frontend_Basico",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RegistroDispositivo"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Frontend_Basico.Pages.RegistroDispositivo"
+        }
+      },
+      {
+        "HashCode": 1883992270,
+        "Kind": "Components.Component",
+        "Name": "Frontend_Basico.Pages.RegistroDispositivo",
+        "AssemblyName": "Frontend_Basico",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Frontend_Basico.Pages.RegistroDispositivo"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Frontend_Basico.Pages.RegistroDispositivo",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

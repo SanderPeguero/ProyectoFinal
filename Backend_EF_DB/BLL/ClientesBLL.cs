@@ -6,7 +6,8 @@ public class ClientesBLL{
     public static bool Create(Cliente cliente){//Inserta un Cliente a la base de datos
 
         bool successfull = false;
-        contexto.Entry(cliente).State = EntityState.Added;
+        contexto.Clientes.Add(cliente);
+        // contexto.Entry(cliente).State = EntityState.Added;
 
         successfull = contexto.SaveChanges() > 0;
 
@@ -29,8 +30,8 @@ public class ClientesBLL{
         bool successfull = false;
 
         if(contexto.Clientes.Any(l => l.ClienteId == cliente.ClienteId)){
-
-            contexto.Entry(cliente).State = EntityState.Modified;
+            contexto.Clientes.Update(cliente);
+            //contexto.Entry(cliente).State = EntityState.Modified;
             successfull = contexto.SaveChanges() > 0;
 
         }
@@ -43,7 +44,8 @@ public class ClientesBLL{
     
         bool successfull = false;
 
-        contexto.Entry(cliente).State = EntityState.Deleted;
+        // contexto.Entry(cliente).State = EntityState.Deleted;
+        contexto.Remove(cliente);
         successfull = contexto.SaveChanges() > 0;
         
         return successfull;

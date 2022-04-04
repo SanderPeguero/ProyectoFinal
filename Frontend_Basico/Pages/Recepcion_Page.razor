@@ -8,7 +8,7 @@
         <div class="card mb-3 bg-secondary">
 
             <div class="card-header bg-dark">
-                <h3 class="text-white">Registro de Dispositivos</h3>
+                <h3 class="text-white">Recepción</h3>
             </div>
 
             <div class="card-body">
@@ -70,7 +70,7 @@
                 <div class="form-group mb-3">
                     <div class="input-group">
 
-                        <span class="input-group-text">Tecnico</span>
+                        <span class="input-group-text">Técnico</span>
                         <InputText class="form-control" @bind-Value="Tecnico"/>
                         <ValidationMessage For="@(() => Tecnico)"/>
 
@@ -80,7 +80,7 @@
                 <div class="form-group mb-3">
                     <div class="input-group">
 
-                        <span class="input-group-text">Categoria</span>
+                        <span class="input-group-text">Categoría</span>
                         <select class="form-select" aria-label="Default select example" @bind="Cliente">
                             @foreach (var categoria in categorias)
                             {
@@ -129,14 +129,7 @@
                                 <InputText style="margin: 5px;" class="form-control" 
                                     placeholder="Descripción del detalle" @bind-Value="Detalle"/>
 
-                                @* <InputNumber style="margin: 5px;" class="form-control"/>
-                                @bind-Value="Cantidad" 
-
-                                <InputNumber style="margin: 5px;" class="form-control"/>
-                                @bind-Value="Precio"  
-                                *@
-
-                                <button type="button" style="margin: 5px;" class="btn btn-lg btn-dark"
+                                <button type="button" style="margin: 5px;" class="btn btn-dark"
                                     @onclick="AgregarDetalle" 
                                     >Agregar Detalle
                                 </button>
@@ -146,10 +139,9 @@
                     </div>
                 </div>
 
-                <table class="table table-light">
-                    <thead class="thead">
+                <table class="table table-light mt-3">
+                    <thead class="thead mb-1">
                         <tr class="table">
-                            <th>Id</th>
                             <th>Descripción</th>
                         </tr>
                     </thead>
@@ -157,10 +149,8 @@
                          @foreach(var detalle in problemas)
                         {
                             <tr>
-                                <td>@detalle.RecepcionDetalleId</td>
-                                <td>@detalle.Detalle</td>
-                                <td><span class="btn btn-sm btn-outline-primary oi oi-ban" href="#" @onclick="@(() => RemoverFila(detalle))" > Remover</span> </td> 
-                                
+                                <td class="mb-2">@detalle.Detalle</td>
+                                <td class="d-flex justify-content-end"><span class="btn btn-sm btn-outline-secondary oi oi-ban" href="#" @onclick=@(() => RemoverFila(detalle))> Remover</span> </td> 
                             </tr>
                         }
                     </tbody>

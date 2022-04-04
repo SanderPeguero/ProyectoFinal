@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Backend_EF_DB.Migrations
+namespace ProyectoFinal.Migrations
 {
     public partial class Inicial : Migration
     {
@@ -56,6 +56,23 @@ namespace Backend_EF_DB.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Recepciones",
+                columns: table => new
+                {
+                    RecepcionId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Fecha = table.Column<DateTime>(type: "TEXT", nullable: false),
+                    Tecnico = table.Column<string>(type: "TEXT", nullable: true),
+                    ClienteId = table.Column<int>(type: "INTEGER", nullable: false),
+                    CategoriaId = table.Column<int>(type: "INTEGER", nullable: false),
+                    ProductoId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Recepciones", x => x.RecepcionId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Dispositivo",
                 columns: table => new
                 {
@@ -63,6 +80,7 @@ namespace Backend_EF_DB.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Marca = table.Column<string>(type: "TEXT", nullable: true),
                     Modelo = table.Column<string>(type: "TEXT", nullable: true),
+                    SO = table.Column<string>(type: "TEXT", nullable: true),
                     IMEI = table.Column<string>(type: "TEXT", nullable: true),
                     Color = table.Column<string>(type: "TEXT", nullable: true),
                     Teclado = table.Column<bool>(type: "INTEGER", nullable: false),
@@ -77,38 +95,6 @@ namespace Backend_EF_DB.Migrations
                         principalTable: "Clientes",
                         principalColumn: "ClienteId",
                         onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Recepciones",
-                columns: table => new
-                {
-                    RecepcionId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Fecha = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    ClienteId = table.Column<int>(type: "INTEGER", nullable: true),
-                    Tecnico = table.Column<string>(type: "TEXT", nullable: true),
-                    CategoriaId = table.Column<int>(type: "INTEGER", nullable: true),
-                    ProductoId = table.Column<int>(type: "INTEGER", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Recepciones", x => x.RecepcionId);
-                    table.ForeignKey(
-                        name: "FK_Recepciones_Categorias_CategoriaId",
-                        column: x => x.CategoriaId,
-                        principalTable: "Categorias",
-                        principalColumn: "CategoriaId");
-                    table.ForeignKey(
-                        name: "FK_Recepciones_Clientes_ClienteId",
-                        column: x => x.ClienteId,
-                        principalTable: "Clientes",
-                        principalColumn: "ClienteId");
-                    table.ForeignKey(
-                        name: "FK_Recepciones_Productos_ProductoId",
-                        column: x => x.ProductoId,
-                        principalTable: "Productos",
-                        principalColumn: "ProductoId");
                 });
 
             migrationBuilder.CreateTable(
@@ -133,12 +119,42 @@ namespace Backend_EF_DB.Migrations
             migrationBuilder.InsertData(
                 table: "Categorias",
                 columns: new[] { "CategoriaId", "Descripcion", "Nombre" },
-                values: new object[] { 1, "El dispositivo no suena, tampoco vibra, ni muestra nada en pantalla", "No enciende" });
+                values: new object[] { 1, "El dispositivo no enciende sin estar conectado al cargador", "Bateria" });
+
+            migrationBuilder.InsertData(
+                table: "Categorias",
+                columns: new[] { "CategoriaId", "Descripcion", "Nombre" },
+                values: new object[] { 2, "El dispositivo no muestra nada en pantalla pero suena y da algunas respuestas a la interaccion", "Pantalla" });
+
+            migrationBuilder.InsertData(
+                table: "Categorias",
+                columns: new[] { "CategoriaId", "Descripcion", "Nombre" },
+                values: new object[] { 3, "El dispositivo no ha sufrido daños fisicos, la bateria y la pantalla funcionan al intercambiarla con un dispositivo de prueba", "Tarjeta Madre" });
+
+            migrationBuilder.InsertData(
+                table: "Categorias",
+                columns: new[] { "CategoriaId", "Descripcion", "Nombre" },
+                values: new object[] { 4, "El dispositivo no carga, la bateria se muestra en buen estado al intercambiarla con un dispositivo de prueba", "Pin de Carga" });
 
             migrationBuilder.InsertData(
                 table: "Productos",
                 columns: new[] { "ProductoId", "Descripcion", "Nombre", "Precio" },
-                values: new object[] { 1, "El tecnico retira la bateria vieja y la cambia por una nueva", "Cambio de Bateria", 800 });
+                values: new object[] { 1, "El tecnico retira la bateria vieja y la cambia por una nueva", "Cambio de Bateria", 400 });
+
+            migrationBuilder.InsertData(
+                table: "Productos",
+                columns: new[] { "ProductoId", "Descripcion", "Nombre", "Precio" },
+                values: new object[] { 2, "El tecnico retira la bateria vieja y la cambia por otra", "Cambio de Pantalla", 800 });
+
+            migrationBuilder.InsertData(
+                table: "Productos",
+                columns: new[] { "ProductoId", "Descripcion", "Nombre", "Precio" },
+                values: new object[] { 3, "El tecnico retira la bateria vieja y la cambia por otra", "Cambio de Tarjeta Madre", 1200 });
+
+            migrationBuilder.InsertData(
+                table: "Productos",
+                columns: new[] { "ProductoId", "Descripcion", "Nombre", "Precio" },
+                values: new object[] { 4, "El tecnico retira la bateria vieja y la cambia por otro", "Cambio de Pin de Carga", 1600 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Dispositivo_ClienteId",
@@ -149,42 +165,27 @@ namespace Backend_EF_DB.Migrations
                 name: "IX_RecepcionDetalle_RecepcionId",
                 table: "RecepcionDetalle",
                 column: "RecepcionId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Recepciones_CategoriaId",
-                table: "Recepciones",
-                column: "CategoriaId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Recepciones_ClienteId",
-                table: "Recepciones",
-                column: "ClienteId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Recepciones_ProductoId",
-                table: "Recepciones",
-                column: "ProductoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Categorias");
+
+            migrationBuilder.DropTable(
                 name: "Dispositivo");
+
+            migrationBuilder.DropTable(
+                name: "Productos");
 
             migrationBuilder.DropTable(
                 name: "RecepcionDetalle");
 
             migrationBuilder.DropTable(
-                name: "Recepciones");
-
-            migrationBuilder.DropTable(
-                name: "Categorias");
-
-            migrationBuilder.DropTable(
                 name: "Clientes");
 
             migrationBuilder.DropTable(
-                name: "Productos");
+                name: "Recepciones");
         }
     }
 }
